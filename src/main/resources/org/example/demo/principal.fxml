@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="504.0" prefWidth="771.0" style="-fx-background-image: url('fondo.jpg'); -fx-background-position: center; -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.PrincipalController">
+<BorderPane prefHeight="504.0" prefWidth="771.0" style="-fx-background-image: url('fondo.jpg'); -fx-background-position: center; -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-opacity: 0.9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.PrincipalController">
    <center>
       <GridPane prefHeight="200.0" prefWidth="341.0" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -17,30 +18,42 @@
             <ColumnConstraints />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="195.59998168945313" minHeight="10.0" prefHeight="85.19998779296876" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="315.6000122070312" minHeight="10.0" prefHeight="315.6000122070312" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="292.40000305175784" minHeight="10.0" prefHeight="278.3999816894531" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="315.6000122070312" minHeight="10.0" prefHeight="226.4000183105469" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="BIENVENIDO A LA APLICACIÓN DE MASCOTAS" textFill="#0d0d0d" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Label style="-fx-text-fill: #5d4037; -fx-font-size: 26px; -fx-font-weight: bold;" text="BIENVENIDO A LA APLICACIÓN DE MASCOTAS" textFill="#0d0d0d" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                <font>
                   <Font name="Bell MT" size="20.0" />
                </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="50.0" />
+               </GridPane.margin>
             </Label>
-            <GridPane prefHeight="387.0" prefWidth="546.0" GridPane.rowIndex="1">
+            <GridPane prefHeight="188.0" prefWidth="770.0" GridPane.rowIndex="1">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="143.8000244140625" minHeight="10.0" prefHeight="107.00000610351563" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="266.19998397827146" minHeight="10.0" prefHeight="207.79999389648438" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="143.8000244140625" minHeight="10.0" prefHeight="67.00003662109376" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="266.19998397827146" minHeight="10.0" prefHeight="158.99996337890624" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="accesoClientes" mnemonicParsing="false" onAction="#accesoClientes" text="ACCESO CLIENTES" textFill="#0d0d0d" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="accesoMascotas" mnemonicParsing="false" onAction="#accesoMascotas" text="ACCESO MASCOTAS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="accesoHMedico" mnemonicParsing="false" onAction="#accesoHMedico" text="ACCESO HISTORIAL MÉDICO" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Label text="OPCIONES DE LA APLICACIÓN" textFill="#151515" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="accesoClientes" mnemonicParsing="false" onAction="#accesoClientes" style="-fx-background-color: #20B2AA; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 10;" text="ACCESO CLIENTES" textFill="#101010" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="accesoMascotas" mnemonicParsing="false" onAction="#accesoMascotas" style="-fx-background-color: #20B2AA; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 10;" text="ACCESO MASCOTAS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="accesoHMedico" mnemonicParsing="false" onAction="#accesoHMedico" style="-fx-background-color: #20B2AA; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 10;" text="ACCESO HISTORIAL MÉDICO" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label style="-fx-text-fill: #20B2AA; -fx-font-size: 20px; -fx-font-weight: bold;" text="OPCIONES DE LA APLICACIÓN" textFill="#151515" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                      <font>
                         <Font name="Bell MT" size="15.0" />
                      </font>

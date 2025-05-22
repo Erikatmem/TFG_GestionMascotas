@@ -24,10 +24,10 @@
             <TableView fx:id="tablaHMedico" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columns>
                 <TableColumn fx:id="columnaId" prefWidth="28.799988567829132" text="id" />
-                <TableColumn fx:id="columnaIdMascota" prefWidth="93.60003280639648" text="idMascota" />
-                  <TableColumn fx:id="columnaNombreMascota" prefWidth="169.59994506835938" text="Nombre Mascota" />
-                  <TableColumn fx:id="columnaMotivoVisita" prefWidth="125.5999755859375" text="Motivo Visita" />
-                  <TableColumn fx:id="columnaObservaciones" prefWidth="116.00007629394531" text="Observaciones" />
+                <TableColumn fx:id="columnaIdMascota" prefWidth="56.799983978271484" text="idMascota" />
+                  <TableColumn fx:id="columnaNombreMascota" prefWidth="78.39996337890625" text="Nombre Mascota" />
+                  <TableColumn fx:id="columnaMotivoVisita" prefWidth="108.00001525878906" text="Motivo Visita" />
+                  <TableColumn fx:id="columnaObservaciones" prefWidth="167.99996948242188" text="Observaciones" />
               </columns>
             </TableView>
             <GridPane prefHeight="358.0" prefWidth="135.0" GridPane.rowIndex="1">
@@ -42,14 +42,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="crearHMedico" mnemonicParsing="false" onAction="#crearHMedico" text="Crear Hist. Médico" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="eliminarHMedico" mnemonicParsing="false" onAction="#eliminarHMedico" text="Eliminar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="editarHMedico" mnemonicParsing="false" onAction="#editarHMedico" text="Editar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="copiarHMedico" mnemonicParsing="false" onAction="#copiarHMedico" text="Copiar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" onAction="#verInforme" text="Ver Informe" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="crearHMedico" mnemonicParsing="false" onAction="#crearHMedico" style="-fx-background-color: #20B2AA;" text="Crear Hist. Médico" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="eliminarHMedico" mnemonicParsing="false" onAction="#eliminarHMedico" style="-fx-background-color: #20B2AA;" text="Eliminar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="editarHMedico" mnemonicParsing="false" onAction="#editarHMedico" style="-fx-background-color: #20B2AA;" text="Editar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="copiarHMedico" mnemonicParsing="false" onAction="#copiarHMedico" style="-fx-background-color: #20B2AA;" text="Copiar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#verInforme" style="-fx-background-color: #6d4c41;" text="Ver Informe" textFill="#faf9f9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: darkred;" text="← ATRÁS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: #6d4c41;" text="← ATRÁS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

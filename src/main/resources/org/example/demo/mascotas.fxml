@@ -25,11 +25,11 @@
                <columns>
                   <TableColumn fx:id="columnaId" prefWidth="28.799988567829132" text="id" />
                   <TableColumn fx:id="columnaIdPropietario" prefWidth="74.40002059936523" text="idPropietario" />
-                  <TableColumn fx:id="columnaNombre" prefWidth="46.39996337890625" text="nombre" />
-                  <TableColumn fx:id="columnaRaza" prefWidth="73.5999755859375" text="raza" />
-                  <TableColumn fx:id="columnaFechaNacimiento" prefWidth="64.80000305175781" text="fechaNacimieneto" />
-                  <TableColumn fx:id="columnaPeso" prefWidth="45.60009765625" text="peso" />
-                  <TableColumn fx:id="columnaGenero" prefWidth="45.60009765625" text="genero" />
+                  <TableColumn fx:id="columnaNombre" prefWidth="62.39996337890625" text="nombre" />
+                  <TableColumn fx:id="columnaRaza" prefWidth="58.39996337890625" text="raza" />
+                  <TableColumn fx:id="columnaFechaNacimiento" prefWidth="96.80000305175781" text="fechaNacimieneto" />
+                  <TableColumn fx:id="columnaPeso" prefWidth="44.0" text="peso" />
+                  <TableColumn fx:id="columnaGenero" prefWidth="47.199951171875" text="genero" />
                </columns>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -47,14 +47,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="crearMascota" mnemonicParsing="false" onAction="#crearMascota" text="Crear Mascota" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="eliminarMascota" mnemonicParsing="false" onAction="#eliminarMascota" text="Eliminar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="editarMascota" mnemonicParsing="false" onAction="#editarMascota" text="Editar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="copiarMascota" mnemonicParsing="false" onAction="#copiarMascota" text="Copiar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" onAction="#verInforme" text="Ver Informe" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="crearMascota" mnemonicParsing="false" onAction="#crearMascota" style="-fx-background-color: #20B2AA;" text="Crear Mascota" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="eliminarMascota" mnemonicParsing="false" onAction="#eliminarMascota" style="-fx-background-color: #20B2AA;" text="Eliminar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="editarMascota" mnemonicParsing="false" onAction="#editarMascota" style="-fx-background-color: #20B2AA;" text="Editar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="copiarMascota" mnemonicParsing="false" onAction="#copiarMascota" style="-fx-background-color: #20B2AA;" text="Copiar Mascota" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#verInforme" style="-fx-background-color: #6d4c41;" text="Ver Informe" textFill="#f2eded" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: darkred;" text="← ATRÁS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: #6d4c41;" text="← ATRÁS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </center>

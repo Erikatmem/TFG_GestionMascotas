@@ -111,7 +111,7 @@ public class clientesController {
         Parent root = loader.load();
 
         //Crear la nueva escena.
-        Scene scene = new Scene(root,1000,600);
+        Scene scene = new Scene(root,800,500);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);

@@ -43,14 +43,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="crearProp" mnemonicParsing="false" onAction="#crearProp" text="Crear Propietario" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="eliminarProp" mnemonicParsing="false" onAction="#eliminarProp" text="Eliminar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="editarProp" mnemonicParsing="false" onAction="#editarProp" text="Editar Propieatrio" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="copiarProp" mnemonicParsing="false" onAction="#copiarProp" text="Copiar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" onAction="#verInforme" text="Ver Informe" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="crearProp" mnemonicParsing="false" onAction="#crearProp" style="-fx-background-color: #20B2AA;" text="Crear Propietario" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="eliminarProp" mnemonicParsing="false" onAction="#eliminarProp" style="-fx-background-color: #20B2AA;" text="Eliminar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="editarProp" mnemonicParsing="false" onAction="#editarProp" style="-fx-background-color: #20B2AA;" text="Editar Propieatrio" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="copiarProp" mnemonicParsing="false" onAction="#copiarProp" style="-fx-background-color: #20B2AA;" text="Copiar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#verInforme" style="-fx-background-color: #6d4c41;" text="Ver Informe" textFill="#f7f6f6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onAction="#atras" text="← ATRÁS" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: #6d4c41;" text="← ATRÁS" textFill="#f4f0f0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

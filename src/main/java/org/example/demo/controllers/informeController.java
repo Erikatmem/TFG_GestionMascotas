@@ -75,7 +75,7 @@ public class informeController {
     public void setAntiguoHistMedico(HistorialMedico hMedico) {
         this.antiguoHistMedico = hMedico;
         if (initialized) {
-            informe.setText("INFORME *HISTORIAL MÉDICO*");
+            informe.setText("INFORME  HISTORIAL MÉDICO \uD83C\uDFE5");
             etiqueta1.setText("ID: ");
             valor1.setText(hMedico.getId()+"");
             etiqueta2.setText("ID Mascota: ");
@@ -92,7 +92,6 @@ public class informeController {
             }else{
                 valor6.setText(hMedico.getTratamiento()+"");
             }
-
             etiqueta7.setText("Observaciones: ");
             valor7.setText(hMedico.getObservaciones()+"");
             etiqueta8.setText("Fecha Visita: ");
@@ -103,7 +102,7 @@ public class informeController {
     public void setAntiguoCliente(Propietarios propietarios) {
         this.antiguoPro = propietarios;
         if (initialized) {
-            informe.setText("INFORME *PROPIETARIO*");
+            informe.setText("INFORME  PROPIETARIO \uD83D\uDC64");
             etiqueta1.setText("ID: ");
             valor1.setText(antiguoPro.getId()+"");
             etiqueta2.setText("Nombre: ");
@@ -114,8 +113,6 @@ public class informeController {
             valor4.setText(antiguoPro.getEmail());
             etiqueta5.setText("Dirección: ");
             valor5.setText(antiguoPro.getDireccion());
-
-
             etiqueta7.setText("Teléfono: ");
             valor7.setText(antiguoPro.getTelefono());
             etiqueta8.setText("");
@@ -126,7 +123,7 @@ public class informeController {
     public void setAntiguaMascota(Mascotas mascota) {
         this.mascotas = mascota;
         if (initialized) {
-            informe.setText("INFORME *MASCOTA*");
+            informe.setText("INFORME  MASCOTA \uD83D\uDC3E");
             etiqueta1.setText("ID: ");
             valor1.setText(mascotas.getId()+"");
             etiqueta2.setText("Nombre: ");
