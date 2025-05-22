@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-image: url('fondo.jpg'); -fx-background-position: center center; -fx-background-size: cover; -fx-opacity: 0.8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.PrincipalController">
+   <children>
+      <GridPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.59998168945313" minHeight="10.0" prefHeight="85.19998779296876" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="315.6000122070312" minHeight="10.0" prefHeight="315.6000122070312" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="BIENVENIDO A LA APLICACIÓN DE MASCOTAS" textFill="#0d0d0d" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font></Label>
+            <GridPane prefHeight="315.0" prefWidth="296.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="143.8000244140625" minHeight="10.0" prefHeight="107.00000610351563" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="266.19998397827146" minHeight="10.0" prefHeight="207.79999389648438" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="accesoClientes" mnemonicParsing="false" onAction="#accesoClientes" text="ACCESO CLIENTES" textFill="#0d0d0d" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="accesoMascotas" mnemonicParsing="false" onAction="#accesoMascotas" text="ACCESO MASCOTAS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="accesoHMedico" mnemonicParsing="false" onAction="#accesoHMedico" text="ACCESO HISTORIAL MÉDICO" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="OPCIONES DE LA APLICACIÓN" textFill="#151515" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Bell MT" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
