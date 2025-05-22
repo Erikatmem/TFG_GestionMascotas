@@ -70,7 +70,7 @@ public class hMedicoController {
         Parent root = loader.load();
 
         //Crear la nueva escena.
-        Scene scene = new Scene(root, 700, 500);
+        Scene scene = new Scene(root, 1000, 600);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);
@@ -111,6 +111,11 @@ public class hMedicoController {
             JOptionPane.showMessageDialog(null, "Error. Para eliminar un propietario debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
 
         }
+    }
+
+    @FXML
+    void verInforme(ActionEvent event) {
+        ventanaInforme();
     }
 
     @FXML
@@ -189,6 +194,37 @@ public class hMedicoController {
                 } else {
                     UtilsJOptionPane.OPERACION_CANCEALDA();
                 }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    private void ventanaInforme() {
+        HistorialMedico seleccionado = tablaHMedico.getSelectionModel().getSelectedItem();
+
+        if (seleccionado != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/informe.fxml"));
+            try {
+                Parent root = loader.load();
+
+                informeController modalController = loader.getController();
+
+
+                Stage modalStage = new Stage();
+                modalController.setStage(modalStage);
+                modalController.setAntiguoHistMedico(seleccionado); //NO ES EDICIÓN
+                modalStage.setTitle("Ventana Modal");
+
+                modalStage.setScene(new Scene(root));
+
+                modalStage.initModality(Modality.APPLICATION_MODAL);
+
+                modalStage.showAndWait();
+
+
 
             } catch (IOException e) {
                 throw new RuntimeException(e);

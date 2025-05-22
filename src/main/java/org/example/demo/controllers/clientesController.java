@@ -1,6 +1,7 @@
 package org.example.demo.controllers;
 
 import BBDD.Consultas;
+import Clases.HistorialMedico;
 import Clases.Propietarios;
 import Utils.UtilsJOptionPane;
 import javafx.beans.Observable;
@@ -110,7 +111,7 @@ public class clientesController {
         Parent root = loader.load();
 
         //Crear la nueva escena.
-        Scene scene = new Scene(root,700,500);
+        Scene scene = new Scene(root,1000,600);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);
@@ -192,6 +193,41 @@ public class clientesController {
                 }else{
                     UtilsJOptionPane.OPERACION_CANCEALDA();
                 }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    @FXML
+    void verInforme(ActionEvent event) {
+    ventanaInforme();
+    }
+    private void ventanaInforme() {
+        Propietarios seleccionado = tablaPropietarios.getSelectionModel().getSelectedItem();
+
+        if (seleccionado != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/informe.fxml"));
+            try {
+                Parent root = loader.load();
+
+                informeController modalController = loader.getController();
+
+
+                Stage modalStage = new Stage();
+                modalController.setStage(modalStage);
+                modalController.setAntiguoCliente(seleccionado); //NO ES EDICIÓN
+                modalStage.setTitle("Ventana Modal");
+
+                modalStage.setScene(new Scene(root));
+
+                modalStage.initModality(Modality.APPLICATION_MODAL);
+
+                modalStage.showAndWait();
+
+
 
             } catch (IOException e) {
                 throw new RuntimeException(e);

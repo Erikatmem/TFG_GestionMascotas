@@ -40,12 +40,14 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Button fx:id="crearProp" mnemonicParsing="false" onAction="#crearProp" text="Crear Propietario" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button fx:id="eliminarProp" mnemonicParsing="false" onAction="#eliminarProp" text="Eliminar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <Button fx:id="editarProp" mnemonicParsing="false" onAction="#editarProp" text="Editar Propieatrio" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="copiarProp" mnemonicParsing="false" onAction="#copiarProp" text="Copiar Propietario" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#verInforme" text="Ver Informe" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <Button mnemonicParsing="false" onAction="#atras" text="← ATRÁS" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />

@@ -58,7 +58,7 @@ public class PrincipalController {
         Parent root = loader.load();
 
         //Crear la nueva escena.
-        Scene scene = new Scene(root,700,500);
+        Scene scene = new Scene(root,1000,600);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);

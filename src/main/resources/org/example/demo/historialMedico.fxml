@@ -39,12 +39,14 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Button fx:id="crearHMedico" mnemonicParsing="false" onAction="#crearHMedico" text="Crear Hist. Médico" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button fx:id="eliminarHMedico" mnemonicParsing="false" onAction="#eliminarHMedico" text="Eliminar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <Button fx:id="editarHMedico" mnemonicParsing="false" onAction="#editarHMedico" text="Editar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="copiarHMedico" mnemonicParsing="false" onAction="#copiarHMedico" text="Copiar Hist. Médico" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#verInforme" text="Ver Informe" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <Button mnemonicParsing="false" onAction="#atras" style="-fx-background-color: darkred;" text="← ATRÁS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
