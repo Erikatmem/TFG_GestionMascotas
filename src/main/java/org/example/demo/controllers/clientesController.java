@@ -69,49 +69,55 @@ public class clientesController {
             Consultas.copiarPropietario(seleccionado);
             actualizarRegistros();
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para copiar debe seleccionar un propietario.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     @FXML
     void crearProp(ActionEvent event) {
-    ventanaCreacionPropietario();
+        ventanaCreacionPropietario();
     }
 
 
     @FXML
     void editarProp(ActionEvent event) {
         ventanaEdicionPropietario();
-
-
     }
 
     @FXML
     void eliminarProp(ActionEvent event) {
         Propietarios seleccionado = tablaPropietarios.getSelectionModel().getSelectedItem();
         if (seleccionado != null) {
-            Consultas.eliminarPropietario(seleccionado);
-            actualizarRegistros();
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Estás seguro que desea eliminar?");
+            if (opcion == 0) {
+                Consultas.eliminarPropietario(seleccionado);
+                actualizarRegistros();
+                UtilsJOptionPane.OPERACION_CONFIRMADA();
+            } else {
+                UtilsJOptionPane.OPERACION_CANCEALDA();
+            }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para eliminar un propietario debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para eliminar debe seleccionar un propietario.", "Error", JOptionPane.ERROR_MESSAGE);
 
         }
 
 
     }
+
     @FXML
     void atras(ActionEvent event) throws IOException {
-        abrirVentana("principal",event);
+        abrirVentana("principal", event);
     }
-    public void abrirVentana(String ventana,ActionEvent event) throws IOException {
+
+    public void abrirVentana(String ventana, ActionEvent event) throws IOException {
         //JOptionPane.showMessageDialog(null,"Mensaje automático CLIENTES","Prueba",JOptionPane.QUESTION_MESSAGE);
 
         //Cargar FXML de la nueva ventana.
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/"+ventana+".fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/" + ventana + ".fxml"));
         Parent root = loader.load();
 
         //Crear la nueva escena.
-        Scene scene = new Scene(root,800,500);
+        Scene scene = new Scene(root, 800, 500);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);
@@ -137,7 +143,8 @@ public class clientesController {
         datos.addAll(Consultas.consultarPropietarios());
         tablaPropietarios.setItems(datos);
     }
-    private void ventanaCreacionPropietario(){
+
+    private void ventanaCreacionPropietario() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/edicionPropietario.fxml"));
         try {
             Parent root = loader.load();
@@ -155,7 +162,7 @@ public class clientesController {
             if (nuevoPropietario != null) {
                 Consultas.copiarPropietario(nuevoPropietario);
                 actualizarRegistros();
-            }else{
+            } else {
                 UtilsJOptionPane.OPERACION_CANCEALDA();
             }
 
@@ -190,7 +197,7 @@ public class clientesController {
                 if (nuevoPropietario != null) {
                     Consultas.modificarPropietario(nuevoPropietario);
                     actualizarRegistros();
-                }else{
+                } else {
                     UtilsJOptionPane.OPERACION_CANCEALDA();
                 }
 
@@ -198,13 +205,15 @@ public class clientesController {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para copiar debe seleccionar un propietario.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
     @FXML
     void verInforme(ActionEvent event) {
-    ventanaInforme();
+        ventanaInforme();
     }
+
     private void ventanaInforme() {
         Propietarios seleccionado = tablaPropietarios.getSelectionModel().getSelectedItem();
 
@@ -228,12 +237,11 @@ public class clientesController {
                 modalStage.showAndWait();
 
 
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Seleccione para ver el informe", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 

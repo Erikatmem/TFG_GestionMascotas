@@ -9,27 +9,29 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane prefHeight="452.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.mascotasController">
+<BorderPane prefHeight="475.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.mascotasController">
    <center>
-      <GridPane alignment="CENTER" prefHeight="320.0" prefWidth="467.0" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" prefHeight="421.0" prefWidth="626.0" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="140.1999954223633" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="499.200048828125" minWidth="10.0" prefWidth="438.6000045776367" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="194.79999389648438" minHeight="10.0" prefHeight="42.79999389648438" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="358.0000061035156" minHeight="10.0" prefHeight="358.0000061035156" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="194.79999389648438" minHeight="10.0" prefHeight="48.80000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="440.40003051757816" minHeight="10.0" prefHeight="402.2" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="440.40003051757816" minHeight="7.000036621093727" prefHeight="37.39999999999998" vgrow="SOMETIMES" />
+            <RowConstraints />
          </rowConstraints>
          <children>
-            <TableView fx:id="tablaMascotas" prefHeight="459.0" prefWidth="562.0" GridPane.columnIndex="1" GridPane.rowSpan="2">
+            <TableView fx:id="tablaMascotas" prefHeight="357.0" prefWidth="436.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
                <columns>
                   <TableColumn fx:id="columnaId" prefWidth="28.799988567829132" text="id" />
                   <TableColumn fx:id="columnaIdPropietario" prefWidth="74.40002059936523" text="idPropietario" />
-                  <TableColumn fx:id="columnaNombre" prefWidth="62.39996337890625" text="nombre" />
-                  <TableColumn fx:id="columnaRaza" prefWidth="58.39996337890625" text="raza" />
-                  <TableColumn fx:id="columnaFechaNacimiento" prefWidth="96.80000305175781" text="fechaNacimieneto" />
-                  <TableColumn fx:id="columnaPeso" prefWidth="44.0" text="peso" />
-                  <TableColumn fx:id="columnaGenero" prefWidth="47.199951171875" text="genero" />
+                  <TableColumn fx:id="columnaNombre" prefWidth="62.39996337890625" text="Nombre" />
+                  <TableColumn fx:id="columnaRaza" prefWidth="58.39996337890625" text="Raza" />
+                  <TableColumn fx:id="columnaFechaNacimiento" prefWidth="96.80000305175781" text="FechaNacimieneto" />
+                  <TableColumn fx:id="columnaPeso" prefWidth="44.0" text="Peso" />
+                  <TableColumn fx:id="columnaGenero" prefWidth="47.199951171875" text="Genero" />
                </columns>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

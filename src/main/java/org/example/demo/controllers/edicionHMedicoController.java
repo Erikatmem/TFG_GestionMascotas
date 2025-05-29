@@ -50,7 +50,7 @@ public class edicionHMedicoController {
     private Stage stage;
     private boolean initialized = false;
 
-    //Método entre ventanas
+    //Metodo entre ventanas.
     public HistorialMedico getDatos() {
         return datos;
     }

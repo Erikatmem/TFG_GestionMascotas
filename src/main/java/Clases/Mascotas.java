@@ -1,11 +1,13 @@
 package Clases;
 
-
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.Date;
 
+/* Clase que representa la entidad de HistorialMedico.
+ * Cada entidad representa una fila de una consulta.
+ */
 public class Mascotas {
     int id, idPropietario;
     String nombre,raza;

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.clientesController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.clientesController">
    <children>
       <GridPane alignment="CENTER" prefHeight="378.0" prefWidth="600.0">
         <columnConstraints>
@@ -21,7 +21,7 @@
           <RowConstraints maxHeight="358.0000061035156" minHeight="10.0" prefHeight="358.0000061035156" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView fx:id="tablaPropietarios" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TableView fx:id="tablaPropietarios" prefHeight="314.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columns>
                 <TableColumn fx:id="columnaId" prefWidth="75.0" text="id" />
                 <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="nombre" />

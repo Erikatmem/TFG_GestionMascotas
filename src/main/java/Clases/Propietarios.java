@@ -4,6 +4,9 @@ public class Propietarios {
     String nombre,apellidos,telefono,email,direccion;
     int id;
 
+    /* Clase que representa la entidad de HistorialMedico.
+     * Cada entidad representa una fila de una consulta.
+     */
     public Propietarios(int id, String direccion, String email, String telefono, String apellidos, String nombre) {
         this.id = id;
         this.direccion = direccion;

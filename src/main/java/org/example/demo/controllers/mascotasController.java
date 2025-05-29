@@ -24,6 +24,8 @@ import javax.swing.*;
 import java.io.IOException;
 import java.util.Date;
 
+// Clase controlador Mascotas.
+
 public class mascotasController {
 
     @FXML
@@ -66,13 +68,15 @@ public class mascotasController {
 
     @FXML
     void copiarMascota(ActionEvent event) {
+        // Almacena la selecciona que tiene la fila.
         Mascotas seleccionado = tablaMascotas.getSelectionModel().getSelectedItem();
-
+        // Si la seleccion es correcta copia la fila.
         if (seleccionado != null) {
             Consultas.copiarMascotas(seleccionado);
             actualizarRegistros();
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            //En caso de que la selección no fuera válida, se imprime un mensaje de error.
+            JOptionPane.showMessageDialog(null, "Aviso. Para copiar debe seleccionar una mascota.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -91,10 +95,17 @@ public class mascotasController {
     void eliminarMascota(ActionEvent event) {
         Mascotas seleccionado = tablaMascotas.getSelectionModel().getSelectedItem();
         if (seleccionado != null) {
-            Consultas.eliminarMascotas(seleccionado);
-            actualizarRegistros();
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Estás seguro que desea eliminar?");
+            if (opcion==0){
+                Consultas.eliminarMascotas(seleccionado);
+                actualizarRegistros();
+                UtilsJOptionPane.OPERACION_CONFIRMADA();
+            }else{
+                UtilsJOptionPane.OPERACION_CANCEALDA();
+            }
+
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para eliminar un propietario debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para eliminar debe seleccionar una mascota.", "Error", JOptionPane.ERROR_MESSAGE);
 
         }
     }
@@ -199,7 +210,7 @@ public class mascotasController {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para editar debe seleccionar una mascota.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
     private void ventanaInforme() {
@@ -230,7 +241,7 @@ public class mascotasController {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Seleccione para ver el informe.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
     @FXML

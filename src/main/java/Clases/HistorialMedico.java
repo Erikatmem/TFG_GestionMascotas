@@ -2,6 +2,9 @@ package Clases;
 
 import java.util.Date;
 
+/* Clase que representa la entidad de HistorialMedico.
+* Cada entidad representa una fila de una consulta.
+*/
 public class HistorialMedico {
     private int id, idMascota;
     private Date fechaConsulta, fechaVisita;

@@ -72,11 +72,15 @@ public class edicionPropietarioController {
     @FXML
     void aceptar(ActionEvent event) {
         if (antiguoProp != null){
-            datos = new Propietarios(antiguoProp.getId(), textDireccion.getText(), textEmail.getText(), textTelefono.getText(), textApellidos.getText(), textNombre.getText());
-
+            datos = new Propietarios(
+                    antiguoProp.getId(), textDireccion.getText(),
+                    textEmail.getText(), textTelefono.getText(),
+                    textApellidos.getText(), textNombre.getText());
         }else{
-            datos = new Propietarios(1, textDireccion.getText(), textEmail.getText(), textTelefono.getText(), textApellidos.getText(), textNombre.getText());
-
+            datos = new Propietarios(1,
+                    textDireccion.getText(),
+                    textEmail.getText(), textTelefono.getText(),
+                    textApellidos.getText(), textNombre.getText());
         }
         stage.close();
     }

@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+// Clase controlador Informe.
 public class informeController {
 
     @FXML
@@ -62,13 +63,13 @@ public class informeController {
 
     @FXML
     private Label valor8;
-
     private Stage stage;
     private boolean initialized = false;
     private HistorialMedico antiguoHistMedico = null;
     private Propietarios antiguoPro = null;
     private Mascotas mascotas = null;
 
+// Accede a la consula para poder mostrar el informe.
     public void setStage(Stage stage) {
         this.stage = stage;
     }

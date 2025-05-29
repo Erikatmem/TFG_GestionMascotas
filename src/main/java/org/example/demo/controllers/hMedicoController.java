@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
 
+// Clase controlador histrial Medico.
 public class hMedicoController {
 
     @FXML
@@ -63,7 +64,6 @@ public class hMedicoController {
     }
 
     public void abrirVentana(String ventana, ActionEvent event) throws IOException {
-        //JOptionPane.showMessageDialog(null,"Mensaje automático CLIENTES","Prueba",JOptionPane.QUESTION_MESSAGE);
 
         //Cargar FXML de la nueva ventana.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/" + ventana + ".fxml"));
@@ -74,7 +74,6 @@ public class hMedicoController {
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         currentStage.setScene(scene);
-
         currentStage.show();
     }
 
@@ -87,28 +86,35 @@ public class hMedicoController {
             Consultas.copiarHMedico(seleccionado);
             actualizarRegistros();
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para copiar debe seleccionar el historial", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     @FXML
     void crearHMedico(ActionEvent event) {
-        ventanaCreacionPropietario();
+        ventanaCreacion();
     }
 
     @FXML
     void editarHMedico(ActionEvent event) {
-        ventanaEdicionPropietario();
+        ventanaEdicion();
     }
 
     @FXML
     void eliminarHMedico(ActionEvent event) {
         HistorialMedico seleccionado = tablaHMedico.getSelectionModel().getSelectedItem();
         if (seleccionado != null) {
-            Consultas.eliminarHMedico(seleccionado);
-            actualizarRegistros();
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Estás seguro que desea eliminar?");
+            if (opcion == 0) {
+                Consultas.eliminarHMedico(seleccionado);
+                actualizarRegistros();
+                UtilsJOptionPane.OPERACION_CONFIRMADA();
+
+            } else {
+                UtilsJOptionPane.OPERACION_CANCEALDA();
+            }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para eliminar un propietario debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para eliminar debe seleccionar el historial.", "Error", JOptionPane.ERROR_MESSAGE);
 
         }
     }
@@ -138,7 +144,7 @@ public class hMedicoController {
         tablaHMedico.setItems(datos);
     }
 
-    private void ventanaCreacionPropietario() {
+    private void ventanaCreacion() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/edicionHMedico.fxml"));
         try {
             Parent root = loader.load();
@@ -165,7 +171,7 @@ public class hMedicoController {
         }
     }
 
-    private void ventanaEdicionPropietario() {
+    private void ventanaEdicion() {
         HistorialMedico seleccionado = tablaHMedico.getSelectionModel().getSelectedItem();
 
         if (seleccionado != null) {
@@ -199,9 +205,10 @@ public class hMedicoController {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para editar debe seleccionar el historial.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
     private void ventanaInforme() {
         HistorialMedico seleccionado = tablaHMedico.getSelectionModel().getSelectedItem();
 
@@ -225,12 +232,11 @@ public class hMedicoController {
                 modalStage.showAndWait();
 
 
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Error. Para copiar debe asegurarse de haber un seleccionado un propietario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Seleccione para ver el informe.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 

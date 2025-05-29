@@ -16,6 +16,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+// Clase controlador principal
+
 public class PrincipalController {
 
 
@@ -37,21 +39,18 @@ public class PrincipalController {
 
     @FXML
     void accesoMascotas(ActionEvent event) throws IOException{
-        //JOptionPane.showMessageDialog(null,"Mensaje automático MASCTOAS","Prueba",JOptionPane.QUESTION_MESSAGE);
         abrirVentana("mascotas",event);
 
 
     }
     @FXML
     void accesoHMedico(ActionEvent event) throws IOException{
-        //JOptionPane.showMessageDialog(null,"Mensaje automático MASCTOAS","Prueba",JOptionPane.QUESTION_MESSAGE);
         abrirVentana("historialMedico",event);
 
 
     }
 
     public void abrirVentana(String ventana,ActionEvent event) throws IOException {
-        //JOptionPane.showMessageDialog(null,"Mensaje automático CLIENTES","Prueba",JOptionPane.QUESTION_MESSAGE);
 
         //Cargar FXML de la nueva ventana.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo/"+ventana+".fxml"));

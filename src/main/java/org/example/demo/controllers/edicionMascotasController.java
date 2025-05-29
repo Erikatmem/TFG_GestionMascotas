@@ -42,7 +42,7 @@ public class edicionMascotasController {
     private Stage stage;
     private boolean initialized = false;
 
-    //Método entre ventanas
+    //Metodo entre ventanas.
     public Mascotas getDatos() {
         return datos;
     }
