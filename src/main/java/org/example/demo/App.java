@@ -17,7 +17,8 @@ public class App extends Application {
 
 // Metodo principal de JavaFX. Se ejecuta al iniciar la aplicación.
 // Carga la interfaz gráfica desde un archivo FXML y la muestra en pantalla.
-    //Siguiendo la arquitectura de JAVAFX → (Escenario (Stage), Escena (Scene))
+// Siguiendo la arquitectura de JAVAFX → (Escenario (Stage), Escena (Scene))
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("principal.fxml"));
