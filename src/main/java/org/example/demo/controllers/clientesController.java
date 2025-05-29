@@ -205,7 +205,7 @@ public class clientesController {
                 throw new RuntimeException(e);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Aviso. Para copiar debe seleccionar un propietario.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Aviso. Para editar debe seleccionar un propietario.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
