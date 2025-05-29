@@ -1,7 +1,6 @@
 # 🐾 TFG - Sistema de Gestión de Mascotas
 
-📚 **Proyecto Integrado - Desarrollo de Aplicaciones Multiplataforma (DAM)**  
-🎓 Centro: [Nombre del centro educativo]  
+📚 **Proyecto Integrado - Desarrollo de Aplicaciones Multiplataforma (DAM)**   
 👩‍💻 Alumna: Erika Korkute  
 📅 Curso: 2024 / 2025  
 
