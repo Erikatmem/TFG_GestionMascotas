@@ -27,7 +27,6 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
 // Metodo principal de la aplicación.
     public static void main(String[] args) {
         launch();
